@@ -16,5 +16,6 @@ class AuthorsAPIView(generics.ListAPIView):
 
 
 def index(request):
-    res = 'true'
-    return render(request, 'index.html', {"res":res})
+    author = Author.objects.all()
+    book = Book.objects.all()
+    return render(request, 'index.html', {"author":author, 'book':book})
