@@ -16,4 +16,5 @@ class AuthorsAPIView(generics.ListAPIView):
 
 
 def index(request):
-    return HttpResponse('Hello')
+    res = 'true'
+    return render(request, 'index.html', {"res":res})
